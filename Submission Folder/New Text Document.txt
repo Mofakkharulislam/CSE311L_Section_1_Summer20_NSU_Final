@@ -1,0 +1,6 @@
+SELECT provider.sname
+FROM provider
+WHERE provider.sid IN (SELECT COUNT(stock.pid)
+                      FROM stock,goodies
+                      WHERE goodies.pid = stock.pid
+                      AND goodies.color IN ("Green"))
