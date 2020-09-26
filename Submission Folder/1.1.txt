@@ -1,0 +1,1 @@
+SELECT DISTINCT S.Sname FROM Student S, Class C, course co, department d WHERE S.snum = co.snum AND co.cname = C.name AND C.fid = d.fid AND d.fname = 'Ivana Teach' AND S.major = 'History'
